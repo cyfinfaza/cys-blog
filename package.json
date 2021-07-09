@@ -1,0 +1,33 @@
+{
+  "name": "cy-s-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cy's Blog",
+  "author": "cyfinfaza",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^3.9.0",
+    "gatsby-plugin-manifest": "^3.9.0",
+    "gatsby-plugin-mdx": "^2.9.0",
+    "gatsby-plugin-netlify-cms": "^5.9.0",
+    "gatsby-plugin-react-helmet": "^4.9.0",
+    "gatsby-plugin-sass": "^4.9.0",
+    "gatsby-source-filesystem": "^3.9.0",
+    "netlify-cms-app": "^2.15.26",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.35.2"
+  }
+}
