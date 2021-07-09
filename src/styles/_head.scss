@@ -1,0 +1,34 @@
+$background: white;
+$background-transparent: #FFF8;
+$foreground: #ddd;
+$text: #222;
+
+$theme-transition: 240ms ease;
+
+body, .color-light{
+	--background: #{$background};
+	--background-transparent: #{$background-transparent};
+	--foreground: #{$foreground};
+	--text: #{$text};
+}
+
+.color-dark{
+	--background: #111;
+	--background-transparent: #2228;
+	--foreground: #444;
+	--text: #eee;
+}
+
+.color-black{
+	--background: #000;
+	--background-transparent: #0008;
+	--foreground: #222;
+	--text: #fff;
+}
+
+.color-cobalt{
+	--background: #162d4e;
+	--background-transparent: #1A355B88;
+	--foreground: #2a4469;
+	--text: #fff;
+}

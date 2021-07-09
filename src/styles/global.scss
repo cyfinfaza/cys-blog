@@ -1,0 +1,106 @@
+@use './head' as *;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&family=DM+Serif+Text&family=Libre+Baskerville:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  background-color: $background;
+  background-color: var(--background);
+  color: $text;
+  color: var(--text);
+  transition: background-color $theme-transition, color $theme-transition;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
+  /* padding: var(--page-margin); */
+}
+
+body,
+.font-serif {
+  font-family: "DM Serif Text", sans-serif;
+}
+
+.font-sans {
+  font-family: "DM Sans";
+}
+
+.font-elaborate {
+  font-family: "Libre Baskerville";
+}
+
+* {
+  word-wrap: break-word;
+}
+
+.material-icons-round {
+  user-select: none;
+}
+
+.title {
+  font-size: 64px;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 18px;
+}
+
+pre {
+  padding: 8px;
+  background-color: #ddd;
+  border-left: 8px black solid;
+  border-radius: 8px;
+  font-family: "DM Mono";
+  -moz-tab-size: 4;
+  tab-size: 4;
+  overflow: auto;
+}
+
+.headerpos-sticky .global-headerBar{
+  position: sticky;
+  background-color: $background;
+  background-color: var(--background);
+}
+
+#c_mainColorStop {
+  stop-color: blue;
+  animation: hue_rotate 10s infinite;
+}
+
+body.logo-rgb #c_mainColorStop {
+  stop-color: blue;
+  animation: hue_rotate 10s infinite;
+}
+
+body.logo-mono #c_mainColorStop {
+  stop-color: gray;
+  animation: none;
+}
+
+div.logo-rgb #c_mainColorStop {
+  stop-color: blue;
+  animation: hue_rotate 10s infinite;
+}
+
+div.logo-mono #c_mainColorStop {
+  stop-color: gray;
+  animation: none;
+}
+
+@keyframes hue_rotate {
+  0% {
+    stop-color: hsl(0, 100%, 50%);
+  }
+
+  40% {
+    stop-color: hsl(144, 100%, 50%);
+  }
+
+  60% {
+    stop-color: hsl(216, 100%, 50%);
+  }
+
+  100% {
+    stop-color: hsl(360, 100%, 50%);
+  }
+}

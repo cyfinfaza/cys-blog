@@ -1,0 +1,42 @@
+@use '../styles/head' as *;
+
+$select-transition: 240ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+.pickerGrid{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	gap: 24px;
+	width: 100%;
+	--selected-border: var(--text);
+	--current-background: var(--background);
+	&>div{
+		min-height: 125px;
+		padding: 16px;
+		// border: 3px solid var(--selected-border);
+		box-shadow: 0 0 0 0px var(--current-background), 0 0 0 0px var(--selected-border);
+		border-radius: 16px;
+		background-color: var(--background);
+		color: var(--text);
+		transition: transform $select-transition, box-shadow 240ms ease, color $theme-transition, background-color $theme-transition;
+		user-select: none;
+		cursor: pointer;
+		&:active{
+			transform: scale(0.98);
+		}
+		&>*{
+			margin: 0;
+		}
+		&.selected{
+			box-shadow: 0 0 0 4px var(--current-background), 0 0 0 8px var(--selected-border);
+		}
+	}
+}
+
+.c_logo svg{
+	width: 64px;
+	height: 64px;
+}
+
+.c_logo{
+	margin-top: 8px;
+}

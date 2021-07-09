@@ -1,0 +1,169 @@
+@use '../styles/head' as *;
+
+$page-margin: 32px;
+$menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.layoutContainer {
+  --page-margin: 32px;
+}
+
+.headerBar {
+  display: flex;
+  justify-content: space-between;
+  padding: $page-margin;
+  padding: var(--page-margin);
+  /* padding: 4px; */
+  /* margin: 28px; */
+  height: 64px;
+  /* box-sizing: border-box; */
+  align-items: center;
+  top: 0;
+  // backdrop-filter: blur(24px);
+  /* background-color: white; */
+  /* border-radius: 34px; */
+  /* box-shadow: 0 0px 16px -2px black; */
+}
+
+.headerBar * {
+  margin: 0;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  padding: $page-margin;
+  padding: var(--page-margin);
+  padding-top: 0;
+}
+
+.contentContainer > div {
+  width: 100%;
+  max-width: 900px;
+}
+
+.logoBox {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.logoBox svg {
+  height: 64px;
+  width: 64px;
+}
+
+.logoBox > * {
+  margin-right: 12px;
+}
+
+.general {
+  position: relative;
+  /* overflow: scroll; */
+  /* max-height: 100%; */
+  z-index: 40;
+  transition: $menu-transition;
+  transform-origin: 50vw 50vh;
+  /* transform: scale(0.9); */
+}
+
+.layoutContainer.menuOpen .general {
+  filter: blur(48px);
+  transform: scale(0.8);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.menuCover {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  /* color: white; */
+  background-color: $background;
+  background-color: var(--background);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.5);
+  transition: $menu-transition;
+}
+
+@supports (backdrop-filter: blur(32px)) {
+  .menuCover {
+    background-color: $background-transparent;
+    background-color: var(--background-transparent);
+  }
+}
+
+.layoutContainer.menuOpen .menuCover {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+}
+
+.menuCoverContent {
+  max-height: 100%;
+  overflow: auto;
+  padding: $page-margin;
+  padding: var(--page-margin);
+  box-sizing: border-box;
+  transition: $menu-transition;
+  filter: blur(4px);
+}
+
+.layoutContainer.menuOpen .menuCoverContent {
+  filter: none;
+}
+
+.menuCloseButton {
+  position: fixed;
+  top: $page-margin;
+  top: var(--page-margin);
+  right: $page-margin;
+  right: var(--page-margin);
+}
+
+@media screen and (max-width: 600px) {
+  .layoutContainer {
+    --page-margin: 16px;
+  }
+  .title {
+    font-size: 56px;
+    margin-top: 0.2em;
+    margin-bottom: 0.25em;
+  }
+  .menuCover {
+    align-items: flex-start;
+  }
+  .menuCoverContent {
+    padding-top: 96px;
+    word-wrap: break-word;
+  }
+}
+
+.menuOpenButton,
+.menuCloseButton {
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 240ms;
+  &:hover{
+		background-color: $foreground;
+		background-color: var(--foreground);
+	}
+	&:active{
+	  filter: contrast(0.7);
+	  transform: translateY(3%);
+	}
+}

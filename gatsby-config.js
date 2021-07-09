@@ -22,5 +22,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    // {
+		// 	resolve: 'gatsby-plugin-theme-switcher',
+		// 	options: {
+		// 		defaultDarkTheme: 'theme-dark',
+		// 		defaultLightTheme: 'theme-light',
+		// 	},
+		// },
   ],
 };
