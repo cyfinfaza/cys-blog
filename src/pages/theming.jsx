@@ -84,6 +84,10 @@ const logoThemes = [
     name: "Monochrome",
     class: "logo-mono",
   },
+  {
+    name: "Hidden",
+    class: "logo-hidden",
+  },
 ];
 
 const headerPosThemes = [
@@ -101,7 +105,6 @@ const headerPosThemes = [
 
 const ThemingPage = () => {
   const isBrowser = typeof window !== "undefined";
-  if (!isBrowser) return <></>;
   const [selectedThemes, setSelectedThemes] = useState(isBrowser ? JSON.parse(localStorage.getItem("theming")) || {} : {});
   useEffect(() => {
     // console.log(selectedThemes);
@@ -112,6 +115,7 @@ const ThemingPage = () => {
   const selectedFontTheme = selectedThemes.font || "font-serif";
   const selectedLogoTheme = selectedThemes.logo || "logo-rgb";
   const selectedHeaderPosTheme = selectedThemes.headerPos || "headerpos-static";
+  if (!isBrowser) return <></>;
   return (
     <Layout>
       <h1 className="title">Theming &amp; Customization</h1>
@@ -143,8 +147,8 @@ const ThemingPage = () => {
           <div className={`${theme.class} ${selectedLogoTheme == theme.class && pageStyle.selected}`} onClick={(_) => setSelectedThemes({ ...selectedThemes, logo: theme.class })} key={theme.class}>
             <h2>{theme.name}</h2>
             <p>
-              <div className={`${pageStyle.c_logo} ${theme.class}`}>
-                <ReactSVG src="/c_animated.svg" />
+              <div className={`${pageStyle.c_logo} ${theme.class} themeSampleCard`}>
+                <ReactSVG className="logoBoxLogo" src="/c_animated.svg" />
               </div>
             </p>
           </div>

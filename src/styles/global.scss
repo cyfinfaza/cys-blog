@@ -112,6 +112,10 @@ div.logo-mono #c_mainColorStop {
   animation: none;
 }
 
+.logo-hidden .logoBoxLogo:not(.themeSampleCard:not(.themeSampleCard.logo-hidden) *) {
+  display: none;
+}
+
 @keyframes hue_rotate {
   0% {
     stop-color: hsl(0, 100%, 50%);

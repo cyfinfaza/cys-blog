@@ -31,8 +31,8 @@ const Layout = ({ children, column = true }) => {
         <div className={`${componentStyle.headerBar} global-headerBar`}>
           <a href="/" className={componentStyle.logoBox}>
             {/* <div className={componentStyle.logoBox}> */}
-              <ReactSVG src="/c_animated.svg" />
-              <h1>Cy's Blog</h1>
+            <ReactSVG className="logoBoxLogo" src="/c_animated.svg" />
+            <h1>Cy's Blog</h1>
             {/* </div> */}
           </a>
           <div>
