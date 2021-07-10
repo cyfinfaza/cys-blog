@@ -9,5 +9,3 @@ updated: 2021-07-10T00:58:33.204Z
 thumbnail: /images/uploads/dji_0081.jpg
 ---
 asdfasdfasdfasdfasdf
-import { TestComponent } from "../src/components/testComponent";
-<TestComponent />
