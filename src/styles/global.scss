@@ -14,6 +14,11 @@ body {
   /* padding: var(--page-margin); */
 }
 
+a{
+  color: $text;
+  color: var(--text);
+}
+
 body,
 .font-serif {
   font-family: "DM Serif Text", sans-serif;

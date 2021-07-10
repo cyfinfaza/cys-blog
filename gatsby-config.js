@@ -22,6 +22,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog-posts`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // {
 		// 	resolve: 'gatsby-plugin-theme-switcher',
 		// 	options: {

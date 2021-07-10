@@ -15,6 +15,9 @@ const Layout = ({ children, column = true }) => {
         </span>
         <div className={componentStyle.menuCoverContent}>
           <h1>Welcome to Cy's Blog</h1>
+          <a href="/theming">
+            <h2>Theming</h2>
+          </a>
           <h2>#webdev</h2>
           <h2>#projectmanagement</h2>
           <h2>#embeddedsystems</h2>
@@ -22,15 +25,16 @@ const Layout = ({ children, column = true }) => {
           <h2>#philosophy</h2>
           <h2>#reviews</h2>
           <h2>#french</h2>
-          <h2>theming</h2>
         </div>
       </div>
       <div className={componentStyle.general}>
         <div className={`${componentStyle.headerBar} global-headerBar`}>
-          <div className={componentStyle.logoBox}>
-            <ReactSVG src="/c_animated.svg" />
-            <h1>Cy's Blog</h1>
-          </div>
+          <a href="/" className={componentStyle.logoBox}>
+            {/* <div className={componentStyle.logoBox}> */}
+              <ReactSVG src="/c_animated.svg" />
+              <h1>Cy's Blog</h1>
+            {/* </div> */}
+          </a>
           <div>
             {/* <input className={componentStyle.headerSearch} type="text" placeholder="Search"> */}
             <span onClick={(_) => setMenuOpen(true)} className={`material-icons-round ${componentStyle.menuOpenButton}`}>
