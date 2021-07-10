@@ -1,7 +1,7 @@
-export default function refreshTheme(){
+function refreshTheme(){
 	const themeData = JSON.parse(localStorage.getItem('theming'))
 	if (themeData){
-		document.body.classList = Object.values(themeData).reduce((last, now)=>{
+		document.body.classList = Object.values(themeData).reduce(function (last, now){
 			if(last.length>0){
 				return last+" "+now;
 			}
@@ -9,3 +9,5 @@ export default function refreshTheme(){
 		}, "")
 	}
 }
+
+export default refreshTheme

@@ -31,9 +31,9 @@ const colorThemes = [
     desc: "Low-contrast theme, featuring a gray background and grayish text.",
   },
   {
-	name: "Cobalt",
-	class: "color-cobalt",
-	desc: "A beautiful dark cobalt blue theme, with light text.",
+    name: "Cobalt",
+    class: "color-cobalt",
+    desc: "A beautiful dark cobalt blue theme, with light text.",
   },
   {
     name: "Dark",
@@ -87,22 +87,24 @@ const logoThemes = [
 ];
 
 const headerPosThemes = [
-	{
-	  name: "Static",
-	  class: "headerpos-static",
-	  desc: "Header scrolls with page"
-	},
-	{
-	  name: "Sticky",
-	  class: "headerpos-sticky",
-	  desc: "Header sticks to top of page when scrolling"
-	},
-  ];
+  {
+    name: "Static",
+    class: "headerpos-static",
+    desc: "Header scrolls with page",
+  },
+  {
+    name: "Sticky",
+    class: "headerpos-sticky",
+    desc: "Header sticks to top of page when scrolling",
+  },
+];
 
 const ThemingPage = () => {
-  const [selectedThemes, setSelectedThemes] = useState(JSON.parse(localStorage.getItem("theming")) || {});
+  const isBrowser = typeof window !== "undefined";
+  if (!isBrowser) return <></>;
+  const [selectedThemes, setSelectedThemes] = useState(isBrowser ? JSON.parse(localStorage.getItem("theming")) || {} : {});
   useEffect(() => {
-    console.log(selectedThemes);
+    // console.log(selectedThemes);
     localStorage.setItem("theming", JSON.stringify(selectedThemes));
     refreshTheme();
   }, [selectedThemes]);
@@ -116,12 +118,15 @@ const ThemingPage = () => {
       <p>Make my blog yours (not literally).</p>
       <h1>Color</h1>
       <div className={pageStyle.pickerGrid}>
-        {colorThemes.map((theme) => (
-          <div className={`${theme.class} ${selectedColorTheme == theme.class && pageStyle.selected}`} onClick={(_) => setSelectedThemes({ ...selectedThemes, color: theme.class })} key={theme.class}>
-            <h2>{theme.name}</h2>
-            <p>{theme.desc}</p>
-          </div>
-        ))}
+        {colorThemes.map((theme) => {
+          console.log(selectedColorTheme == theme.class ? pageStyle.selected : "");
+          return (
+            <div className={`${theme.class} ${selectedColorTheme == theme.class ? pageStyle.selected : ""}`} onClick={(_) => setSelectedThemes({ ...selectedThemes, color: theme.class })} key={theme.class}>
+              <h2>{theme.name}</h2>
+              <p>{theme.desc}</p>
+            </div>
+          );
+        })}
       </div>
       <h1>Font</h1>
       <div className={pageStyle.pickerGrid}>
@@ -145,7 +150,7 @@ const ThemingPage = () => {
           </div>
         ))}
       </div>
-	  {/* <h1>Header Position</h1>
+      {/* <h1>Header Position</h1>
       <div className={pageStyle.pickerGrid}>
         {headerPosThemes.map((theme) => (
           <div className={`${theme.class} ${selectedHeaderPosTheme == theme.class && pageStyle.selected}`} onClick={(_) => setSelectedThemes({ ...selectedThemes, headerPos: theme.class })} key={theme.class}>
