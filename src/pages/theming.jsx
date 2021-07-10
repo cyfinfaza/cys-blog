@@ -16,6 +16,26 @@ const colorThemes = [
     desc: "A standard, white-background, light theme.",
   },
   {
+    name: "Light Gray",
+    class: "color-lightgray",
+    desc: "Basically a light theme, but the background is a little darker.",
+  },
+  {
+    name: "Sepia",
+    class: "color-sepia",
+    desc: "Yellowish sepia theme, like the pages of a book or aged newspaper.",
+  },
+  {
+    name: "Gray",
+    class: "color-lowcontrast",
+    desc: "Low-contrast theme, featuring a gray background and grayish text.",
+  },
+  {
+	name: "Cobalt",
+	class: "color-cobalt",
+	desc: "A beautiful dark cobalt blue theme, with light text.",
+  },
+  {
     name: "Dark",
     class: "color-dark",
     desc: "Charcoal/slate style background, with almost-white text.",
@@ -26,9 +46,9 @@ const colorThemes = [
     desc: "An OLED-style dark theme, with white text for contrast.",
   },
   {
-    name: "Cobalt",
-    class: "color-cobalt",
-    desc: "A beautiful dark cobalt blue theme, with light text.",
+    name: "Hacker",
+    class: "color-hacker",
+    desc: 'A green on black terminal-style "hacker" theme.',
   },
 ];
 
@@ -47,6 +67,11 @@ const fontThemes = [
     name: "Elaborate",
     class: "font-elaborate",
     desc: "A complex, older-style font for those who really like serifs.",
+  },
+  {
+    name: "Monospace",
+    class: "font-monospace",
+    desc: "A flashy monospace font, great with the hacker theme.",
   },
 ];
 

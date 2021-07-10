@@ -1,6 +1,6 @@
 @use './head' as *;
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&family=DM+Serif+Text&family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@500&family=DM+Serif+Text&family=Libre+Baskerville:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
 
 body {
   margin: 0;
@@ -25,6 +25,10 @@ body,
 
 .font-elaborate {
   font-family: "Libre Baskerville";
+}
+
+.font-monospace {
+  font-family: "Space Mono";
 }
 
 * {
@@ -62,8 +66,23 @@ pre {
   background-color: var(--background);
 }
 
+#c_backColor{
+  fill: $logo-back;
+  fill: var(--logo-back)
+}
+
+#c_letterPath{
+  fill: $logo-foreground;
+  fill: var(--logo-foreground);
+}
+
+#c_backColor, #c_mainColorStop{
+  transition: fill $theme-transition;
+}
+
 #c_mainColorStop {
-  stop-color: blue;
+  stop-color: $mono-logo;
+  stop-color: var(--mono-logo);
   animation: hue_rotate 10s infinite;
 }
 
@@ -73,7 +92,8 @@ body.logo-rgb #c_mainColorStop {
 }
 
 body.logo-mono #c_mainColorStop {
-  stop-color: gray;
+  stop-color: $mono-logo;
+  stop-color: var(--mono-logo);
   animation: none;
 }
 

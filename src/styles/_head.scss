@@ -2,6 +2,9 @@ $background: white;
 $background-transparent: #FFF8;
 $foreground: #ddd;
 $text: #222;
+$mono-logo: #888;
+$logo-back: #666;
+$logo-foreground: #fff;
 
 $theme-transition: 240ms ease;
 
@@ -10,10 +13,20 @@ body, .color-light{
 	--background-transparent: #{$background-transparent};
 	--foreground: #{$foreground};
 	--text: #{$text};
+	--mono-logo: #{$mono-logo};
+	--logo-back: #{$logo-back};
+	--logo-foreground: #{$logo-foreground};
+}
+
+.color-lightgray{
+	--background: #eee;
+	--background-transparent: #eee8;
+	--foreground: #444;
+	--text: #111;
 }
 
 .color-dark{
-	--background: #111;
+	--background: #181818;
 	--background-transparent: #2228;
 	--foreground: #444;
 	--text: #eee;
@@ -26,9 +39,35 @@ body, .color-light{
 	--text: #fff;
 }
 
+.color-hacker{
+	--background: #000;
+	--background-transparent: #0008;
+	--foreground: #020;
+	--text: #0F0;
+	--mono-logo: rgb(0, 209, 0);
+	--logo-back: #222;
+	--logo-foreground: #000;
+}
+
 .color-cobalt{
 	--background: #162d4e;
 	--background-transparent: #1A355B88;
 	--foreground: #2a4469;
 	--text: #fff;
+	--mono-logo: #1d4379;
+}
+
+.color-sepia{
+	--background: #e0d6b3;
+	--background-transparent: #e0d6b388;
+	--foreground: #bdb496;
+	--text: #111;
+	--mono-logo: #e0d6b3;
+}
+
+.color-lowcontrast{
+	--background: #383838;
+	--background-transparent: #38383888;
+	--foreground: #4d4c4c;
+	--text: #e2e2e2;
 }
