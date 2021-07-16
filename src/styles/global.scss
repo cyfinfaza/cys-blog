@@ -19,12 +19,11 @@ a{
   color: var(--text);
 }
 
-body,
 .font-serif {
   font-family: "DM Serif Text", sans-serif;
 }
 
-.font-sans {
+body, .font-sans {
   font-family: "DM Sans";
 }
 
@@ -40,6 +39,15 @@ body,
   word-wrap: break-word;
 }
 
+*::selection{
+  background-color: $text;
+  background-color: var(--text);
+  color: $background;
+  color: var(--background);
+  border-radius: 4px;
+  transition: color $theme-transition, background-color $theme-transition;
+}
+
 .material-icons-round {
   user-select: none;
 }
@@ -50,8 +58,14 @@ body,
   margin-bottom: 0.5em;
 }
 
+@media screen and (max-width: 600px) {
+  .title{
+    font-size: 52px;
+  }
+}
+
 p {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 pre {
@@ -132,4 +146,8 @@ div.logo-mono #c_mainColorStop {
   100% {
     stop-color: hsl(360, 100%, 50%);
   }
+}
+
+img{
+  width: 100%;
 }

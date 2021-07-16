@@ -54,14 +54,14 @@ const colorThemes = [
 
 const fontThemes = [
   {
-    name: "Serif",
-    class: "font-serif",
-    desc: "A stylish but not too complex font style.",
-  },
-  {
     name: "Sans",
     class: "font-sans",
     desc: "A bold, modern, UI-style font with absolutely no serifs.",
+  },
+  {
+    name: "Serif",
+    class: "font-serif",
+    desc: "A stylish but not too complex font style.",
   },
   {
     name: "Elaborate",
@@ -112,7 +112,7 @@ const ThemingPage = () => {
     refreshTheme();
   }, [selectedThemes]);
   const selectedColorTheme = selectedThemes.color || "color-light";
-  const selectedFontTheme = selectedThemes.font || "font-serif";
+  const selectedFontTheme = selectedThemes.font || "font-sans";
   const selectedLogoTheme = selectedThemes.logo || "logo-rgb";
   const selectedHeaderPosTheme = selectedThemes.headerPos || "headerpos-static";
   if (!isBrowser) return <></>;

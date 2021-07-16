@@ -4,11 +4,12 @@ import { ReactSVG } from "react-svg";
 
 import * as componentStyle from "./layout.module.scss";
 
-const Layout = ({ children, column = true }) => {
+const Layout = ({ children, column = true, headerImageURL }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className={`${componentStyle.layoutContainer} ${menuOpen && componentStyle.menuOpen}`}>
+      {headerImageURL && <div className={componentStyle.coverImage} style={{ "--background-image-url": `url(${headerImageURL})` }} />}
       <div className={componentStyle.menuCover} style={{ display: "none" }}>
         <span onClick={(_) => setMenuOpen(false)} className={`material-icons-round ${componentStyle.menuCloseButton}`}>
           close
