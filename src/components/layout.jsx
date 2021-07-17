@@ -6,12 +6,22 @@ import SVG from "react-inlinesvg";
 import * as componentStyle from "./layout.module.scss";
 import LinkButton from "./linkButton";
 import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
-const Layout = ({ children, column = true, headerImageURL }) => {
+const Layout = ({ children, column = true, headerImageURL, title, description, noHelmet = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const titleString = title ? `${title} - Cy's Blog` : `Cy's Blog`;
   return (
     <div className={`${componentStyle.layoutContainer} ${menuOpen && componentStyle.menuOpen}`}>
+      {!noHelmet && (
+        <Helmet>
+          <title>{titleString}</title>
+          <meta name="og:title" content={titleString} />
+          <meta name="og:site_name" content={"Cy's Blog"} />
+          <meta name="description" content={description} />
+          <meta name="og:description" content={description} />
+        </Helmet>
+      )}
       {headerImageURL && <div className={componentStyle.coverImage} style={{ "--background-image-url": `url(${headerImageURL})` }} />}
       <div className={componentStyle.menuCover} style={{ display: "none" }}>
         <span onClick={(_) => setMenuOpen(false)} className={`material-icons-round ${componentStyle.menuCloseButton}`}>

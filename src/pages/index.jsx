@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 const IndexPage = ({ data }) => {
   const posts = data.allMdx.edges.map((edge) => edge.node);
   return (
-    <Layout>
+    <Layout description="A multimedia blog, written by Cy.">
       {/* <Layout headerImageURL="/homepage/1.jpg"> */}
       <h1 className="title">Hi!</h1>
       <p>Welcome to my work-in-progress blog.</p>

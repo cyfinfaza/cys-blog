@@ -117,7 +117,7 @@ const ThemingPage = () => {
   const selectedHeaderPosTheme = selectedThemes.headerPos || "headerpos-static";
   if (!isBrowser) return <></>;
   return (
-    <Layout>
+    <Layout title="Theming" description="Make my blog yours (not literally).">
       <h1 className="title">Theming &amp; Customization</h1>
       <p>Make my blog yours (not literally).</p>
       <h1>Color</h1>
