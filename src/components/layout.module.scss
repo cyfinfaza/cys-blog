@@ -121,7 +121,8 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
   box-sizing: border-box;
   transition: $menu-transition;
   filter: blur(4px);
-  min-width: 400px;
+  max-width: 400px;
+  width: 100%;
 }
 
 // .menuCoverContent > *{
