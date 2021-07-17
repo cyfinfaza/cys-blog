@@ -6,6 +6,7 @@ tags:
   - webdev
 date: 2021-07-09T17:01:21.719Z
 updated: 2021-07-10T00:58:33.204Z
+thumbnail: /images/uploads/dji_0081.jpg
 ytCoverId: 2JBXJTwoYvY
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum ultrices cursus. Vivamus egestas ullamcorper urna, non sodales purus facilisis ac. Donec ultricies, nisl sed suscipit scelerisque, ipsum augue tristique ipsum, nec elementum erat dui quis nulla. In tincidunt sollicitudin ex non euismod. Cras dictum dolor ligula, a posuere sem vestibulum vitae. Proin interdum ipsum vitae vulputate aliquet. Nulla interdum ullamcorper ipsum at consequat.

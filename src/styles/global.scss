@@ -14,6 +14,13 @@ body {
   /* padding: var(--page-margin); */
 }
 
+// @media print {
+//   body{
+//     background-color: white;
+//     color: black;
+//   }
+// }
+
 a{
   color: $text;
   color: var(--text);
@@ -54,8 +61,8 @@ body, .font-sans {
 
 .title {
   font-size: 64px;
-  margin-top: 0.25em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
 }
 
 @media screen and (max-width: 600px) {
@@ -70,8 +77,10 @@ p {
 
 pre {
   padding: 8px;
-  background-color: #ddd;
-  border-left: 8px black solid;
+  background: $foreground !important;
+  background: var(--foreground) !important;
+  border-left: 8px $text solid;
+  border-left: 8px var(--text) solid;
   border-radius: 8px;
   font-family: "DM Mono";
   -moz-tab-size: 4;

@@ -100,7 +100,7 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
   transition: $menu-transition;
 }
 
-@supports (backdrop-filter: blur(32px)) {
+@supports (filter: blur(32px)) {
   .menuCover {
     background-color: $background-transparent;
     background-color: var(--background-transparent);
@@ -172,6 +172,12 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
 	  filter: contrast(0.7);
 	  transform: translateY(3%);
 	}
+}
+
+@media print {
+  .menuOpenButton, .menuCloseButton {
+    display: none;
+  }
 }
 
 .coverImage{
