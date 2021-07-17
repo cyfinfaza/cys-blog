@@ -87,10 +87,14 @@ pre {
   border-left: 8px $text solid;
   border-left: 8px var(--text) solid;
   border-radius: 8px;
-  font-family: "DM Mono";
+  font-family: "DM Mono", monospace;
   -moz-tab-size: 4;
   tab-size: 4;
   overflow: auto;
+}
+
+code {
+  font-family: "DM Mono", monospace;
 }
 
 .headerpos-sticky .global-headerBar{

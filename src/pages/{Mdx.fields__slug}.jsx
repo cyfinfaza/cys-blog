@@ -24,7 +24,7 @@ export default function Template({ data }) {
   return (
     <Layout headerImageURL={frontmatter.thumbnail}>
       {frontmatter.ytCoverId && (
-        <iframe className={pageStyle.coverVideo} src={`https://www.youtube.com/embed/${frontmatter.ytCoverId}`} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen />
+        <iframe className={pageStyle.coverVideo} src={`https://www.youtube.com/embed/${frontmatter.ytCoverId}`} height="500" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen />
       )}
       <h1 className="title">{frontmatter.title}</h1>
       <p>Updated {frontmatter.updated}</p>

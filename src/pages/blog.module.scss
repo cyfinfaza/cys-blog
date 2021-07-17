@@ -3,3 +3,8 @@
 	aspect-ratio: 16/9;
 	border-radius: 12px;
 }
+@supports (aspect-ratio: 16/9){
+	.coverVideo{
+		height: unset;
+	}
+}
