@@ -26,10 +26,12 @@
     "gatsby-plugin-theme-switcher": "^1.0.0",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-remark": "^4.6.0",
+    "material-design-icons": "^3.0.1",
     "netlify-cms-app": "^2.15.26",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-inlinesvg": "^2.3.0",
     "react-svg": "^14.0.3",
     "react-syntax-highlighter": "^15.4.3",
     "sass": "^1.35.2"

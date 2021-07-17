@@ -121,6 +121,23 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
   box-sizing: border-box;
   transition: $menu-transition;
   filter: blur(4px);
+  min-width: 400px;
+}
+
+// .menuCoverContent > *{
+//   // text-align: center;
+//   transition: transform 240ms, opacity 240ms;
+//   transform: scale(1.5);
+//   opacity: 0;
+// }
+
+// .layoutContainer.menuOpen .menuCoverContent > *{
+//   transform: none;
+//   opacity: 1;
+// }
+
+.menuCoverContent > *{
+  margin-bottom: 16px;
 }
 
 .layoutContainer.menuOpen .menuCoverContent {
@@ -163,14 +180,13 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: 240ms;
+  transition: $button-transition;
   &:hover{
 		background-color: $foreground;
 		background-color: var(--foreground);
 	}
 	&:active{
-	  filter: contrast(0.7);
-	  transform: translateY(3%);
+	  @include button-active;
 	}
 }
 
@@ -193,4 +209,11 @@ $menu-transition: 0.75s cubic-bezier(0.16, 0.9, 0.18, 0.99);
 .layoutContainer.menuOpen .coverImage{
   filter: blur(48px);
   transform: scale(0.9);
+}
+
+@keyframes dropIn {
+  0%{
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }

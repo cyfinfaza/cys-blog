@@ -9,6 +9,7 @@ body {
   color: $text;
   color: var(--text);
   transition: background-color $theme-transition, color $theme-transition;
+  font-size: 18.5px;
   /* max-height: 100vh; */
   /* overflow: hidden; */
   /* padding: var(--page-margin); */
@@ -20,6 +21,11 @@ body {
 //     color: black;
 //   }
 // }
+
+svg {
+  fill: $text;
+  fill: var(--text);
+}
 
 a{
   color: $text;
@@ -60,20 +66,19 @@ body, .font-sans {
 }
 
 .title {
-  font-size: 64px;
+  font-size: 3.5em;
   margin-bottom: 0.25em;
   margin-top: 0.5em;
 }
 
 @media screen and (max-width: 600px) {
   .title{
-    font-size: 52px;
+    font-size: 3em;
   }
 }
 
-p {
-  font-size: 19px;
-}
+// p {
+// }
 
 pre {
   padding: 8px;
